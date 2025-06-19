@@ -1,50 +1,44 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>ARIA Role Example</title>
 </head>
-<style>
-	table,td,th{
-		border: 1px solid black;
-		border-collapse:collapse;
-		padding:10px;
-		
-	}
-</style>
 <body>
-	<!-- the entire body must be written by student -->
-	<table>
-		<tr>
-			<td>Role</td>
-			<td>Tag</td>
-		</tr>
-		<tr>
-			<th>img</th>
-			<th>img</th>
-		</tr>
-		<tr>
-			<th>heading</th>
-			<th>h1</th>
-			
-		</tr>
-		<tr>
-			<th>list</th>
-			<th>ul</th>
-		</tr>
-		<tr>
-			<th>listitem</th>
-			<th>li</th>
-		</tr>
-		<tr>
-			<th>navigation</th>
-			<th>nav</th>
-		</tr>
-	</table>
-    <script type="text/javascript" src="./script.js">
-</script>
+
+  <!-- Landmark Roles -->
+  <header role="banner">
+    <h1>My Website</h1>
+  </header>
+
+  <nav role="navigation" aria-label="Main Navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main role="main">
+    <section role="region" aria-labelledby="news">
+      <h2 id="news">Latest News</h2>
+      <p>Here is the latest update...</p>
+    </section>
+
+    <section role="region" aria-labelledby="events">
+      <h2 id="events">Upcoming Events</h2>
+      <p>Event details here...</p>
+    </section>
+  </main>
+
+  <aside role="complementary">
+    <h2>Sidebar Info</h2>
+    <p>Extra information here...</p>
+  </aside>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 My Website</p>
+  </footer>
 
 </body>
-
 </html>
